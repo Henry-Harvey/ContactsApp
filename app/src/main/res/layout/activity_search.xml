@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+
+    <ListView
+        android:id="@+id/lv_allContacts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sortBusiness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sortLast"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="Last, First"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sortFirst"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sortBusiness"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="Business"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sortLast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_all" />
+
+    <Button
+        android:id="@+id/btn_sortPersonal"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="Personal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sortLast"
+        app:layout_constraintEnd_toStartOf="@+id/btn_all"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_all"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="All"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sortLast"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sortBusiness"
+        app:layout_constraintStart_toEndOf="@+id/btn_sortPersonal" />
+
+    <Button
+        android:id="@+id/btn_sortFirst"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:text="First, Last"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_sortLast" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="Search"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/lv_allContacts"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
